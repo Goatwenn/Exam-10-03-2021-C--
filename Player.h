@@ -1,6 +1,6 @@
 #include <string>
 
-class Player 
+class Joueur 
 {
     private :
         std::string _pseudo;
@@ -11,12 +11,12 @@ class Player
 
     public :
         std::string getPseudo;
-        int ajoutScore();
+        void ajoutScore();
         void calculMinMaxScore();
         void calculMoyenneScore();
         void afficheStates();
-        Player();
-        Player(std :: string nom);
+        Joueur();
+        Joueur(std :: string nom);
 };
 
 

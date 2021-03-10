@@ -4,9 +4,9 @@
 
 /* 
 
-  private :
+   private :
         std::string _pseudo;
-        int _bestScore[5];
+        int _bestScore[5]= {0,0,0,0,0};
         int _maxScore();
         int _minScore();
         int _moyenneScore();
@@ -17,33 +17,29 @@
         void calculMinMaxScore();
         void calculMoyenneScore();
         void afficheStates();
-        Player();
-        Player(std :: string nom);
+        Joueur();
+        Joueur(std :: string nom);
 
 */
 
 
-Player :: Player() : _pseudo("null"), _bestScore {};
+Joueur :: Joueur(): _pseudo("null"), _bestScore {}
 
-Player :: Player(std :: string nom): _pseudo(nom), _bestScore {};
+Joueur :: Joueur(std :: string nom): _pseudo(nom), _bestScore;
 
-int Player :: ajoutScore(chanson,newScore){
-    if(_bestScore[chanson] < newScore){
-        bestScore = newScore;
-        return _bestScore;
-    }
+void Joueur :: ajoutScore(){
 }
 
 
-void Player :: calculMinMaxScore(){
+void Joueur :: calculMinMaxScore(){
 
 }
 
 
-void Player :: calculMoyenneScore(){
+void Joueur :: calculMoyenneScore(){
 }
 
 
-void Player :: afficheStates(){
+void Joueur :: afficheStates(){
 
 }

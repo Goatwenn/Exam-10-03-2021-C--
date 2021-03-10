@@ -26557,7 +26557,7 @@ namespace std
 
 
 # 3 "C:\\Users\\melvi\\Desktop\\Dossier\\Courts\\Programation\\C++\\Exame 10\\03\\21\\Player.h"
-class Player
+class Joueur
 {
     private :
         std::string _pseudo;
@@ -26568,12 +26568,12 @@ class Player
 
     public :
         std::string getPseudo;
-        int ajoutScore();
+        void ajoutScore();
         void calculMinMaxScore();
         void calculMoyenneScore();
         void afficheStates();
-        Player();
-        Player(std :: string nom);
+        Joueur();
+        Joueur(std :: string nom);
 };
 # 4 "C:\\Users\\melvi\\Desktop\\Dossier\\Courts\\Programation\\C++\\Exame 10\\03\\21\\Karaoke.cpp" 2
 # 1 "C:\\Users\\melvi\\Desktop\\Dossier\\Courts\\Programation\\C++\\Exame 10\\03\\21\\Player.cpp" 1
@@ -26582,7 +26582,7 @@ class Player
 # 1 "C:\\Users\\melvi\\Desktop\\Dossier\\Courts\\Programation\\C++\\Exame 10\\03\\21\\player.h" 1
 
 
-class Player
+class Joueur
 {
     private :
         std::string _pseudo;
@@ -26593,39 +26593,33 @@ class Player
 
     public :
         std::string getPseudo;
-        int ajoutScore();
+        void ajoutScore();
         void calculMinMaxScore();
         void calculMoyenneScore();
         void afficheStates();
-        Player();
-        Player(std :: string nom);
+        Joueur();
+        Joueur(std :: string nom);
 };
 # 4 "C:\\Users\\melvi\\Desktop\\Dossier\\Courts\\Programation\\C++\\Exame 10\\03\\21\\Player.cpp" 2
 # 26 "C:\\Users\\melvi\\Desktop\\Dossier\\Courts\\Programation\\C++\\Exame 10\\03\\21\\Player.cpp"
-Player :: Player() : _pseudo("null"), _bestScore {}
+Joueur :: Joueur(): _pseudo("null"), _bestScore;
 
-Player :: Player(std :: string nom): _pseudo(nom), _bestScore[5], _maxScore(0), _minScore(0), _moyenneScore(0)
+Joueur :: Joueur(std :: string nom): _pseudo(nom), _bestScore;
 
-
-
-int Player :: ajoutScore(chanson, newScore){
-    if(_bestScore[chanson] < newScore){
-        _bestScore = newScore;
-    }
+void Joueur :: ajoutScore(){
 }
 
 
-void Player :: calculMinMaxScore(){
+void Joueur :: calculMinMaxScore(){
 
 }
 
 
-void Player :: calculMoyenneScore(){
+void Joueur :: calculMoyenneScore(){
 }
 
 
-void Player :: afficheStates(){
-    return _bestScore[1] ;
+void Joueur :: afficheStates(){
 
 }
 # 5 "C:\\Users\\melvi\\Desktop\\Dossier\\Courts\\Programation\\C++\\Exame 10\\03\\21\\Karaoke.cpp" 2
@@ -26634,11 +26628,10 @@ using namespace std;
 
 int main () {
 
+    int newScore = 45;
 
+    Joueur Hugo = Joueur("Hugo");
 
-    Player Hugo = Player("Hugo");
-
-    Hugo.ajoutScore(1,43);
-    cout << "Pseudo = " << _bestScore[1] << endl;
+    Hugo.ajoutScore();
 
 }

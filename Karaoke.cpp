@@ -9,7 +9,7 @@ int main () {
 
     int newScore = 45;
 
-    Player Hugo = Player("Hugo");
+    Joueur Hugo = Joueur("Hugo");
 
     Hugo.ajoutScore();
 
