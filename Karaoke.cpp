@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Player.h"
+
 #include "Player.cpp"
 
 using namespace std;
@@ -12,5 +12,5 @@ int main () {
     Joueur Hugo = Joueur("Hugo");
 
     Hugo.ajoutScore();
-
+    Hugo.afficheStates();
 }    

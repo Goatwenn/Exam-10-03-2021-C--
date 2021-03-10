@@ -14,7 +14,7 @@ class Joueur
         void ajoutScore();
         void calculMinMaxScore();
         void calculMoyenneScore();
-        void afficheStates();
+        int afficheStates();
         Joueur();
         Joueur(std :: string nom);
 };
